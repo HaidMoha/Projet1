@@ -8,9 +8,10 @@ h = 20  # en mm
 
 # Calcul de l'inertie
 
-I = 
+I = ((b*10**-3)*(h*10**-3)**3)/12
 
-# Calcul de la déformation maximale
+#Calcul de la deformation maximal
 
-delta_max = 
+delta_max = (F*(L*10**-3)**3)/(3*(E*10**9)*I)
 
+print('La deformation maximale de la poutre est', round(delta_max*10**3, 2), 'mm')
